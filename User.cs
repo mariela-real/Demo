@@ -10,12 +10,13 @@ namespace Demo
 {
     public class User
     {
-      
         public int Id { get; set; }
         public Role Role { get; set; }
         public Person? Person { get; set; }
         public ICollection<Task> Tasks { get; set; } = new List<Task>();
-
+        
+        public User() { }
+       
         public User(int id, Role role, Person person, List<Task> tasks) 
         {
             Id = id;
@@ -23,13 +24,5 @@ namespace Demo
             Person = person;
             Tasks = tasks;
         }
-
-        public User() { }
-
-        public override string ToString()
-        {
-            return "Usuario: " + Id + " " + Role + " " + Person + " " + Tasks ;
-        }
-
     }
 }

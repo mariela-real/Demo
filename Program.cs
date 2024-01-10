@@ -7,6 +7,28 @@ namespace Demo
     {
         public static void Main(string[] args)
         {
+          
+                /*int[] array2 = [0];
+                int[] newArray = new int[array2.Length];
+                for (int i = 0; array2.Length > i; i++)
+                {
+                    newArray[i] = array2[array2.Length - 1 - i];
+                }*/
+           
+            TestArray investedArray = new TestArray();
+            int[] newArray = investedArray.InvestedArray([1, 2, 3, 4]);
+
+            Console.Write("[");
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                Console.Write(newArray[i]);
+                if (i < newArray.Length - 1)
+                {
+                    Console.Write(", ");
+                }
+            }
+            Console.WriteLine("]");
+            /*
             List<Task> tasks = new List<Task>()
             {
                 new Task(1, 2, "pending", "Hacer la primera hu para la truchita"),
@@ -55,7 +77,7 @@ namespace Demo
                     $"Estado actual: {task.ActualState} \n" +
                     $"descripcion: {task.Description} \n"
                 );
-            }
+            }*/
         }
 
     }
