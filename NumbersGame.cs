@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-    public abstract class Array
+    public abstract class NumbersGame
     {
         public abstract int [] InvestedArray(int[] array);
-        public abstract int[] RepeatedValuesArray(int[] array);
+        public abstract int RepeatedValuesArray(int[] array);
     }
 
 }
