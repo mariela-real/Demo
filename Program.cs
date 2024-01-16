@@ -1,42 +1,32 @@
 ﻿using System;
+using System.Threading.Tasks;
 
-namespace Demo 
-{
+namespace Demo
+{ 
     public class Program
     {
         public static void Main(string[] args)
         {
+            FunMethods investedArray = new FunMethods();
+            int[] newArray = investedArray.InvestedArray([2, 3, 3, 4]);
+            int secondArray = investedArray.RepeatedValuesArray([2, 3, 3, 4]);
 
-            List<Task> task = new List<Task>()
+            Console.Write("[");
+            for (int i = 0; i < newArray.Length; i++)
             {
-                new Task("1", 2, "pending", "Hacer la primera hu para la truchita"),
-            };
-           // var task = new List<Task> { new Task("1", 2, "pending", "Hacer la primera hu para la truchita"), };
-            var result = new User
-            {
-                Id = "1",
-                Name = "Mariela",
-                Tasks = task,
-            };
-           // Console.WriteLine(result );
-            PrintUser(result);
-        }
-        public static void PrintUser(User persona)
-        {
-            Console.WriteLine(
-                $"Persona ID: {persona.Id}" +
-                $"Nombre: {persona.Name}"
-            );
-
-            foreach (var tarea in persona.Tasks)
-            {
-                Console.WriteLine($"Tarea ID: {tarea.Id}" +
-                     $"Hora: {tarea.TimeEstimatedTime}" +
-                     $"Estado actual: {tarea.ActualState}" +
-                    $"descripcion: {tarea.Description}"
-                   
-                    );
+                Console.Write(newArray[i]);
+                if (i < newArray.Length - 1)
+                {
+                    Console.Write(", ");
+                }
             }
+            Console.WriteLine("]");
+
+            Console.WriteLine("["+ secondArray+ "]");
+
+           
+
+
         }
 
     }
